@@ -4,15 +4,17 @@ import './App.css';
 
 import Infobox from './component/Infobox';
 import Map from './component/Map';
+import Table from './component/Table';
 
 function App() {
     const [countries, setCountries] = React.useState([]);
     const [selectedCountry, setSelectedCountry] = React.useState('worldwide');
     const [countryInfo, setCountryInfo] = React.useState({})
+   
 
-    React.useEffect( () => {
+    React.useEffect(() => {
         fetch(`https://disease.sh/v3/covid-19/all`).then((response) => response.json()).then((data) => setCountryInfo(data));
-    },[])
+    }, [])
 
 
     React.useEffect(() => {
@@ -69,7 +71,7 @@ function App() {
                 <Card>
                     <CardContent>
                         <h2>Live case by country</h2>
-                        {/* Table */}
+                        <Table  /> 
                         {/* Graph */}
                     </CardContent>
                 </Card>
