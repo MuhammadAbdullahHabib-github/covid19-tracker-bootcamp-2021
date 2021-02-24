@@ -5,11 +5,13 @@ import './App.css';
 import Infobox from './component/Infobox';
 import Map from './component/Map';
 import Table from './component/Table';
+import LineGraph from './component/LineGraph'
 
 function App() {
     const [countries, setCountries] = React.useState([]);
     const [selectedCountry, setSelectedCountry] = React.useState('worldwide');
-    const [countryInfo, setCountryInfo] = React.useState({})
+    const [countryInfo, setCountryInfo] = React.useState({});
+    
    
 
     React.useEffect(() => {
@@ -72,6 +74,8 @@ function App() {
                     <CardContent>
                         <h2>Live case by country</h2>
                         <Table  /> 
+                        <h2>World new cases</h2>
+                        <LineGraph data = {selectedCountry}/>
                         {/* Graph */}
                     </CardContent>
                 </Card>
