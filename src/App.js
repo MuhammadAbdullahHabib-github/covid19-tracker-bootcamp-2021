@@ -62,9 +62,9 @@ function App() {
                 </div>
 
                 <div className="app__stats">
-                    <Infobox title='Coronavirus Cases' cases={countryInfo.todayCases} total={countryInfo.cases} />
-                    <Infobox title='Recovered' cases={countryInfo.todayRecovered} total={countryInfo.recovered} />
-                    <Infobox title='Deaths' cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
+                    <Infobox title='Coronavirus Cases' cases={countryInfo.todayCases} total={countryInfo.cases} color='blue'/>
+                    <Infobox title='Recovered' cases={countryInfo.todayRecovered} total={countryInfo.recovered} color='green'/>
+                    <Infobox title='Deaths' cases={countryInfo.todayDeaths} total={countryInfo.deaths} color='red' />
                 </div>
                 <Map />
             </div>

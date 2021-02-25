@@ -4,6 +4,7 @@
 
 body{
     background-color: #f5f6fa;
+    max-height: 100vh;
 }
 
 .App{
@@ -27,6 +28,8 @@ body{
     display: flex;
     justify-content: space-evenly;
 }
+
+
 
 @media (max-width: 990px) {
     .App{

@@ -13,7 +13,7 @@ const LineGraph = ({data}) => {
         }
         graphDataFetch();
     }, [graphData])
-    console.log(graphData.country,graphData.cases, graphData.recovered, graphData.deaths);
+    
 
     const dat = {
         labels: ['Infacted', 'Recovered', 'Death'],
@@ -36,7 +36,7 @@ const LineGraph = ({data}) => {
             <Bar
           data={dat}
           width={100}
-          height={300}
+          height={200}
           options={{
             maintainAspectRatio: false
           }}
